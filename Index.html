@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sassy's Portfolio</title>
+  <link rel="icon" href="images/ico.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="dark-toggle" title="Toggle dark mode">🍀</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="intro lazy-section">
+        <h1>SASA, MARK JOSEPH N.</h1>
+        <p><a href="https://umamusume.com" target="_blank">UMA MUSUME IS LIFE</a></p>
+        <p>I have been playing Uma Musume for over a hundred hours now because it is so addicting!</p>
+        <div class="profile-pic">
+          <img src="images/Me.jpg" alt="A Picture" width="160" />
+        </div>
+      </section>
+
+      <section id="about" class="education-section lazy-section">
+      <h2>🌿 About Me</h2>
+      <div class="about-card hidden">
+        <p>I’m a web development student passionate about coding, anything tech related, and Uma Musume.</p>
+      </div>
+      </section>
+
+      <section id="education" class="education-section lazy-section">
+        <h2>🎓 Education</h2>
+        <div class="edu-card hidden">
+          <h3>Paete Science and Business College (1st year - 3rd year)</h3>
+          <p><strong>2009-2012</strong></p>
+        </div>
+
+        <div class="edu-card hidden">
+          <h3>ALS (Alternative Learning System)</h3>
+          <p><strong>Secondary Advancement Graduate</strong></p>
+          <p>2015 - 2016</p>
+          <p>Graduated as one of the top marks</p>
+        </div>
+
+        <div class="edu-card hidden">
+          <h3>Data Center College of the Philippines</h3>
+          <p>2023 - present</p>
+          <p>Currently in my 3rd year as a BSIT Student with a passion for programming</p>
+        </div>
+      </section>
+
+      <section id="skills" class="education-section lazy-section">
+          <h2>🛠️ Skills</h2>
+        <div class="about-card hidden">
+          <p>Entry-level programming skills in Python and C#</p>
+          <p>Computer Support Technician (Entry-Level)</p>
+          <p>Gaming skills</p>
+        </div>
+      </section>
+
+      <section id="projects" class="education-section lazy-section">
+          <h2>📁 Projects</h2>
+        <div class="about-card hidden">
+          <p>Calculator in Java Programming</p>
+          <p>University Enrollment System (Python)</p>
+          <p>Pet Simulator Game (Python)</p>
+        </div>
+      </section>
+
+      <section id="contact" class="education-section lazy-section">
+          <h2>📞 Contact</h2>
+        <div class="about-card hidden">
+          <p>Email: markjoseph995@gmail.com  |  Number: 09662546388 | Social Media account: <a href="https://www.facebook.com/Mr.Sassy23" target="_blank">Facebook</a><p>
+        </div>
+      </section>
+
+      <section id="music" class="music-float">
+        <h2>🎵 Lobby Music</h2>
+        <p>Immerse yourself in the Uma Musume vibes!</p>
+        <audio controls loop>
+          <source src="audio/uma-lobby.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Mark Joseph Navarro Sasa. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('dark-toggle');
+    const wrapper = document.querySelector('.wrapper');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+  <script>
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.edu-card, .about-card').forEach(card => {
+    observer.observe(card);
+  });
+</script>
+</body>
+</html>
