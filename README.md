@@ -37,9 +37,9 @@
 ---
 
 ## 📊 GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MarkJosephSasa&show_icons=true&title_color=3fa34d&icon_color=f28c28&text_color=333333&bg_color=f0fff0)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Sassy-23&show_icons=true&title_color=3fa34d&icon_color=f28c28&text_color=333333&bg_color=f0fff0)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=MarkJosephSasa&layout=compact&title_color=3fa34d&text_color=333333&bg_color=f0fff0)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Sassy-23&layout=compact&title_color=3fa34d&text_color=333333&bg_color=f0fff0)
 
 ---
 
