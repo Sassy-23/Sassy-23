@@ -1,5 +1,3 @@
-## Hi there 👋
-
 # 🐎🌿 Hey there, I’m Mark Joseph Sasa
 
 🎓 **3rd Year IT Student** | 💻 Aspiring Developer | 🎮 Gaming Enthusiast
