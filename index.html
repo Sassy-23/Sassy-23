@@ -35,10 +35,10 @@
       </section>
 
       <section id="about" class="education-section lazy-section">
-      <h2>🌿 About Me</h2>
-      <div class="about-card hidden">
-        <p>I’m a web development student passionate about coding, anything tech related, and Uma Musume.</p>
-      </div>
+        <h2>🌿 About Me</h2>
+        <div class="about-card hidden">
+          <p>I’m a web development student passionate about coding, anything tech related, and Uma Musume.</p>
+        </div>
       </section>
 
       <section id="education" class="education-section lazy-section">
@@ -63,7 +63,7 @@
       </section>
 
       <section id="skills" class="education-section lazy-section">
-          <h2>🛠️ Skills</h2>
+        <h2>🛠️ Skills</h2>
         <div class="about-card hidden">
           <p>Entry-level programming skills in Python and C#</p>
           <p>Computer Support Technician (Entry-Level)</p>
@@ -72,7 +72,7 @@
       </section>
 
       <section id="projects" class="education-section lazy-section">
-          <h2>📁 Projects</h2>
+        <h2>📁 Projects</h2>
         <div class="about-card hidden">
           <p>Calculator in Java Programming</p>
           <p>University Enrollment System (Python)</p>
@@ -81,7 +81,7 @@
       </section>
 
       <section id="contact" class="education-section lazy-section">
-          <h2>📞 Contact</h2>
+        <h2>📞 Contact</h2>
         <div class="about-card hidden">
           <p>Email: markjoseph995@gmail.com  |  Number: 09662546388 | Social Media account: <a href="https://www.facebook.com/Mr.Sassy23" target="_blank">Facebook</a><p>
         </div>
@@ -91,7 +91,7 @@
         <h2>🎵 Lobby Music</h2>
         <p>Immerse yourself in the Uma Musume vibes!</p>
         <audio controls loop>
-          <source src="audio/uma-lobby.m4a" type="audio/mp4" />
+          <source src="audio/uma-lobby.mp3" type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>
       </section>
@@ -102,31 +102,56 @@
     </footer>
   </div>
 
+  <button id="scrollTopBtn" title="Back to Top">↑</button>
+  <button id="scrollBottomBtn" title="Scroll to Bottom">↓</button>
+
   <script>
     const toggle = document.getElementById('dark-toggle');
-    const wrapper = document.querySelector('.wrapper');
-
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
   </script>
+
   <script>
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-        observer.unobserve(entry.target);
-      }
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.2
     });
-  }, {
-    threshold: 0.2
+
+    document.querySelectorAll('.edu-card, .about-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+
+  <script>
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+  const scrollBottomBtn = document.getElementById("scrollBottomBtn");
+
+  function updateScrollButtons() {
+    const scrolledDown = window.scrollY > 200;
+    const atBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight - 2;
+
+    scrollTopBtn.style.display = scrolledDown ? "block" : "none";
+    scrollBottomBtn.style.display = atBottom ? "none" : "block";
+  }
+
+  window.addEventListener("scroll", updateScrollButtons);
+  window.addEventListener("resize", updateScrollButtons);
+  document.addEventListener("DOMContentLoaded", updateScrollButtons);
+
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  document.querySelectorAll('.edu-card, .about-card').forEach(card => {
-    observer.observe(card);
+  scrollBottomBtn.addEventListener("click", () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
   });
 </script>
 </body>
 </html>
-
-
