@@ -1,6 +1,6 @@
 # 🐎🌿 Hey there, I’m Mark Joseph Sasa
 
-🎓 **3rd Year IT Student** | 💻 Aspiring Developer | 🎮 Gaming Enthusiast
+🎓 **4th Year IT Student** | 💻 Aspiring Developer | 🎮 Gaming Enthusiast
 
 ---
 
